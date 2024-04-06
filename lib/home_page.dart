@@ -11,18 +11,22 @@ class HomePage extends StatelessWidget {
       height: 60,
       textStyle: const TextStyle(
         fontSize: 22,
-        color: Colors.black,
+        color: Color.fromARGB(255, 46, 42, 42),
       ),
       decoration: BoxDecoration(
-        color: Colors.green.shade100,
+        color: const Color.fromARGB(255, 200, 229, 230),
         borderRadius: BorderRadius.circular(8),
         border: Border.all(color: Colors.transparent),
       ),
     );
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.green,
-        title: const Text('OTP TextField'),
+        backgroundColor: Colors.blue,
+        title: const Text('OTP TextField',
+          style: TextStyle(
+                  color: Colors.white,
+          )
+        ),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -65,10 +69,20 @@ class HomePage extends StatelessWidget {
                 defaultPinTheme: defaultPinTheme,
                 focusedPinTheme: defaultPinTheme.copyWith(
                   decoration: defaultPinTheme.decoration!.copyWith(
-                    border: Border.all(color: Colors.green),
+                    border: Border.all(color: Color.fromARGB(255, 83, 190, 204)),
                   ),
                 ),
                 onCompleted: (pin) => debugPrint(pin),
+              ),
+           const SizedBox(height: 20), // Add space between PIN and button
+              Center(
+                child: ElevatedButton(
+                  onPressed: () {
+                    // Navigate to the next page (replace with your navigation logic)
+                    Navigator.pushNamed(context, '/nextPage'); // Assuming next page has route name '/nextPage'
+                  },
+                  child: const Text('Next'),
+                ),
               ),
             ],
           ),
