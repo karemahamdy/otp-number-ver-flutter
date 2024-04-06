@@ -57,7 +57,7 @@ class HomePage extends StatelessWidget {
               Container(
                 margin: const EdgeInsets.only(bottom: 40),
                 child: const Text(
-                  "+93 744 795 640",
+                  "+01156711041",
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 18,
@@ -65,7 +65,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Pinput(
-                length: 5,
+                length: 6,
                 defaultPinTheme: defaultPinTheme,
                 focusedPinTheme: defaultPinTheme.copyWith(
                   decoration: defaultPinTheme.decoration!.copyWith(
@@ -81,7 +81,11 @@ class HomePage extends StatelessWidget {
                     // Navigate to the next page (replace with your navigation logic)
                     Navigator.pushNamed(context, '/nextPage'); // Assuming next page has route name '/nextPage'
                   },
-                  child: const Text('Next'),
+                  child: const Text('Next',
+                    style: TextStyle(
+                    color: Colors.blue,
+                    
+                  ),),
                 ),
               ),
             ],
